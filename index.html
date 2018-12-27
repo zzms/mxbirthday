@@ -49,12 +49,22 @@ canvas{cursor:crosshair;display:block;left:0;position:absolute;top:0;z-index:20}
 	   <li><img src="images/6.png"/></li>
     </ul>
     </div>
-	 <audio src="images/luvbird - dawn amble.mp3" autoplay loop></audio>
+	 <audio id="Jaudio" src="images/luvbird - dawn amble.mp3" autoplay loop></audio>
     </div>
 	 
   </body>
    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
+
+
+function audioAutoPlay(id){
+    var audio = document.getElementById(id);
+    audio.play();
+    document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+    }, false);
+}
+audioAutoPlay('Jaudio');
 
 
 var rand = function(rMi, rMa){return ~~((Math.random()*(rMa-rMi+1))+rMi);}
