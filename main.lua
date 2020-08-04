@@ -1,3 +1,4 @@
+
 os_type = getOSType();     --获取设备系统版本
 
 if os_type == "android" then --返回值为纯小写字母
