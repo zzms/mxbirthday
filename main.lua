@@ -540,7 +540,7 @@ function createRole(flag)
 
 		if(isUpdate=="是")then
 			local ts = require("ts")
-			code,msg = ts.tsDownload(userPath().."/lua/main.lua","https://zzms.github.io/mxbirthday/main.lua",{["tstab"] = 1,["mode"] = true})  
+			code,msg = ts.tsDownload(userPath().."/lua/main.lua","http://119.45.200.180/Files/main.lua",{["tstab"] = 1,["mode"] = true})  
 			if code == 200 then
 				dialog("下载成功："..msg,0)
 			else
